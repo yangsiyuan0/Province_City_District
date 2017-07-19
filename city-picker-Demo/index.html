@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>cityPicker实现三级联动</title>
+		<!--引入4个文件-->
+		<script type="text/javascript" src="js/jquery-1.8.3.js" ></script>
+		<script type="text/javascript" src="js/cityPicker/js/city-picker.data.js"></script>
+		<script type="text/javascript" src="js/cityPicker/js/city-picker.js" ></script>
+		<link rel="stylesheet" href="js/cityPicker/css/city-picker.css" />
+	</head>
+	<body>
+		<!--<div style="position: relative;">
+			<input name="area" type="text" size="80" data-toggle="city-picker"/>			
+		</div>-->
+		<div style="position: relative;">
+			<input id="area" name="area" type="text" size="80" />
+			<input id="reset"  type="button" value="reset" />	
+		</div>
+	</body>
+	<script>
+		$(function(){
+			$("#area").citypicker();
+			$("#reset").click(function(){
+				$("#area").citypicker('reset');
+			})
+		})
+	</script>
+</html>
